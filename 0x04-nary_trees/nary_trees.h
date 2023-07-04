@@ -2,7 +2,7 @@
 #define NARY_TREES_H
 #include <stdio.h>
 #include <stdbool.h>
-#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct nary_tree_s - N-ary tree node structure
  *
