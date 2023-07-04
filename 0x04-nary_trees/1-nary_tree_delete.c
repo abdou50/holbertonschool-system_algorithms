@@ -1,22 +1,23 @@
 #include "nary_trees.h"
-#include <string.h>
+
 /**
  * nary_tree_delete - delete
  * @tree: the tree
+ * Return: void
  */
 
 void nary_tree_delete(nary_tree_t *tree)
 {
-	nary_tree_t *tree1, *tree2;
+	nary_tree_t *tmp, *tmp2;
 
-	if (tree != NULL)
+	if (!tree)
 		return;
-	tree1 = tree->children;
-	while (tree1)
+	tmp = tree->children;
+	while (tmp)
 	{
-		tree2 = tree1->next;
-		nary_tree_delete(tree1);
-		tree1 = tree2;
+		tmp2 = tmp->next;
+		nary_tree_delete(tmp);
+		tmp = tmp2;
 	}
 	free(tree->content);
 	free(tree);
