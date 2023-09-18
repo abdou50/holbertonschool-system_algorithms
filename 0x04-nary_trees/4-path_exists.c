@@ -1,5 +1,5 @@
 #include "nary_trees.h"
-
+#include <string.h>
 /**
  * path_exists - Checks if a path exists between two nodes
  * @root: Pointer to the root node
